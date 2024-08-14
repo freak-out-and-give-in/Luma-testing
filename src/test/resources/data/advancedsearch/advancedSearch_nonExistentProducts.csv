@@ -1,0 +1,4 @@
+productName,sku,description,shortDescription,lowerPrice,upperPrice,amountOfProducts
+fakeproduct,,,,,,
+,,"not real at all",,,,2
+,BREAK,,,,,
