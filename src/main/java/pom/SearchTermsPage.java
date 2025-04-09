@@ -35,14 +35,14 @@ public class SearchTermsPage extends LoadableComponent<SearchTermsPage> {
     public SearchResultsPage clickThisSearchTerm(SearchTerm searchTerm) {
         findThisSearchTerm(searchTerm).click();
 
-        return new SearchResultsPage(driver, searchTerm.getSearchTerm());
+        return new SearchResultsPage(driver, searchTerm.searchTerm());
     }
 
     private WebElement findThisSearchTerm(SearchTerm searchTerm) {
         List<WebElement> searchTerms = driver.findElements(By.className("item"));
 
         return searchTerms.stream()
-                .filter(term -> term.getText().equals(searchTerm.getSearchTerm()))
+                .filter(term -> term.getText().equals(searchTerm.searchTerm()))
                 .findFirst().get();
     }
 

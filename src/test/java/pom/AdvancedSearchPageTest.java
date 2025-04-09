@@ -52,7 +52,7 @@ class AdvancedSearchPageTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data/advancedsearch/advancedSearchInvalid.csv", numLinesToSkip = 1)
     void searchFor_withInvalidData(String productName, String sku, String description, String shortDescription,
-                                 String lowerPrice, String upperPrice) {
+                                   String lowerPrice, String upperPrice) {
         AdvancedSearch advancedSearch = new AdvancedSearch(productName, sku, description, shortDescription,
                 lowerPrice, upperPrice);
 

@@ -1,14 +1,5 @@
 package support;
 
-public class SearchTerm {
+public record SearchTerm(String searchTerm) {
 
-    private final String searchTerm;
-
-    public SearchTerm(String searchTerm) {
-        this.searchTerm = searchTerm;
-    }
-
-    public String getSearchTerm() {
-        return searchTerm;
-    }
 }

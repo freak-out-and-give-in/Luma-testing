@@ -30,7 +30,7 @@ class RegisterPageTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data/registration/registrationValid.csv", numLinesToSkip = 1)
     void registerAs_withValidRegistration(String firstName, String lastName, String email,
-                                                              String password, String confirmPassword) {
+                                          String password, String confirmPassword) {
         Registration registration = new Registration(firstName, lastName, email, password, confirmPassword);
 
         registerPage.registerAs(registration);
@@ -41,7 +41,7 @@ class RegisterPageTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data/registration/registrationInvalid.csv", numLinesToSkip = 1)
     void registerAs_withInvalidRegistration(String firstName, String lastName, String email,
-                                                              String password, String confirmPassword) {
+                                            String password, String confirmPassword) {
         Registration registration = new Registration(firstName, lastName, email, password, confirmPassword);
 
         registerPage.registerAs(registration);

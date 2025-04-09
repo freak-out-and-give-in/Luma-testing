@@ -72,7 +72,7 @@ class ComparisonPageTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data/category/category.csv", numLinesToSkip = 1)
     void removeProduct_All(String path, String firstProductName, String secondProductName, String thirdProductName,
-                         String fourthProductName) {
+                           String fourthProductName) {
         List<String> listOfProductNames = new ArrayList<>(List.of(firstProductName, secondProductName,
                 thirdProductName, fourthProductName));
         CategoryPage categoryPage = new CategoryPage(driver, path).get();

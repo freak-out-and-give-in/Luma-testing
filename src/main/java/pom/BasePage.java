@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+// An abstract kind of page that contains common components to the website
 public class BasePage {
 
     private final WebDriver driver;

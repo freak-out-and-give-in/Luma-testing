@@ -73,14 +73,14 @@ public class ProductResultsPage {
 
     public boolean doAllProductsContainThisName(String word) {
         return products.stream()
-                .map(Product::getName)
+                .map(Product::name)
                 .map(String::toLowerCase)
                 .allMatch(productName -> productName.contains(word));
     }
 
     public boolean doAllProductsContainThisSku(String sku) {
         List<String> listOfProductHref = products.stream()
-                .map(Product::getUrl)
+                .map(Product::url)
                 .toList();
 
         for (String productHref : listOfProductHref) {
@@ -150,10 +150,10 @@ public class ProductResultsPage {
     }
 
     private boolean checkIfSortedByPrice() {
-        double previousValue = products.get(0).getPrice();
+        double previousValue = products.get(0).price();
 
         for (Product product : products) {
-            double currentProductsValue = product.getPrice();
+            double currentProductsValue = product.price();
 
             if (currentProductsValue < previousValue) {
                 return false;
@@ -166,10 +166,10 @@ public class ProductResultsPage {
     }
 
     private boolean checkIfSortedByProductName() {
-        String previousName = products.get(0).getName();
+        String previousName = products.get(0).name();
 
         for (Product product : products) {
-            String currentName = product.getName();
+            String currentName = product.name();
 
             if (previousName.charAt(0) > currentName.charAt(0)) {
                 return false;

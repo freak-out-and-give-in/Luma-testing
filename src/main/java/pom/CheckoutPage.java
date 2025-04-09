@@ -88,7 +88,8 @@ public class CheckoutPage extends LoadableComponent<CheckoutPage> {
 
         try {
             email.sendKeys(checkout.getEmail());
-        } catch (Exception ignored) { }
+        } catch (Exception ignored) {
+        }
         firstName.sendKeys(checkout.getFirstName());
         lastName.sendKeys(checkout.getLastName());
         company.sendKeys(checkout.getCompany());

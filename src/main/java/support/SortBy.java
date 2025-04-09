@@ -1,6 +1,7 @@
 package support;
 
 public enum SortBy {
+
     PRICE("Price"),
     PRODUCT_NAME("Product name");
 

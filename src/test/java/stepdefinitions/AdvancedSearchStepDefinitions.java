@@ -23,6 +23,7 @@ public class AdvancedSearchStepDefinitions {
     private final AdvancedSearchPage advancedSearchPage;
     private AdvancedSearchResultsPage advancedSearchResultsPage;
     private AdvancedSearch advancedSearch;
+
     public AdvancedSearchStepDefinitions() {
         this.advancedSearchPage = new AdvancedSearchPage(driver);
     }
@@ -43,7 +44,7 @@ public class AdvancedSearchStepDefinitions {
 
         return new AdvancedSearch(productName, sku, description, shortDescription, lowerPrice, upperPrice);
     }
-    
+
     @Given("I am on the advanced search page")
     public void iAmOnTheAdvancedSearchPage() {
         advancedSearchPage.get();

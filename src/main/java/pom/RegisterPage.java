@@ -50,11 +50,11 @@ public class RegisterPage extends LoadableComponent<RegisterPage> {
     }
 
     public void registerAs(Registration registration) {
-        firstName.sendKeys(registration.getFirstName());
-        lastName.sendKeys(registration.getLastName());
-        email.sendKeys(registration.getEmail());
-        password.sendKeys(registration.getPassword());
-        confirmPassword.sendKeys(registration.getConfirmPassword());
+        firstName.sendKeys(registration.firstName());
+        lastName.sendKeys(registration.lastName());
+        email.sendKeys(registration.email());
+        password.sendKeys(registration.password());
+        confirmPassword.sendKeys(registration.confirmPassword());
 
         createAccountButton.click();
     }
